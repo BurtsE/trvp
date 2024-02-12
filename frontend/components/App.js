@@ -92,10 +92,13 @@ export default class App {
           "Content-type": "application/json; charset=UTF-8"
         },
       }).then((response) => {
+        console.log(response.status)
         if (response.status == 200) {
           document.getElementById(ticketID).remove();
           window.confirm = () => {return false}
           window.alert("Билет продан!");
+        } else if (response.status == 401) {
+          window.alert("Недостаточно прав!");
         } else {
           window.alert("Ошибка сервера");
         }
