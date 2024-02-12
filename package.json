@@ -1,0 +1,26 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "test task manager app",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev-front": "vite ./frontend",
+    "build-front": "vite build ./frontend",
+    "dev-back": "npm run build-front && node ./backend"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^16.4.1",
+    "emysql": "^0.0.2",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "pg": "^8.11.3",
+    "vite": "^5.0.10"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express-session": "^1.18.0"
+  }
+}
